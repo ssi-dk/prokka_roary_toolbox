@@ -1,10 +1,10 @@
-# prokka_roary_toolbox
-Scripts for running prokka and roary on calc.
+# Prokka/Roary toolbox
+Scripts for easily running prokka and roary on calc.
 
 
 
 
-# Run Prokka
+## Run Prokka
 
 ### Input
 A directory containing genomic assemblies (.fa, .fna, .fasta)
@@ -20,7 +20,7 @@ A directory for each input-fasta file containing annotated output in a range of 
 
 <br><br>
 
-# Run Roary
+## Run Roary
 
 ### Input
 The output directory from prokka. Roary uses the input files from these which are first gathered and renamed for easier handling
