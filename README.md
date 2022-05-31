@@ -43,11 +43,11 @@ Prokka does genome annotation
 ### Links
 <br>
 # Prokka
-https://github.com/tseemann/prokka
+https://github.com/tseemann/prokka<br>
 <br>
 # Roary
-https://sanger-pathogens.github.io/Roary/
+https://sanger-pathogens.github.io/Roary/<br>
 <br>
 # Blast suite
-https://www.ncbi.nlm.nih.gov/books/NBK279690/
+https://www.ncbi.nlm.nih.gov/books/NBK279690/<br>
 <br>
