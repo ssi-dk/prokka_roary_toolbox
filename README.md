@@ -37,3 +37,17 @@ The output directory from prokka. Roary uses the input files from these which ar
 ## What does it do?
 
 Prokka does genome annotation
+
+
+
+### Links
+<br>
+# Prokka
+https://github.com/tseemann/prokka
+<br>
+# Roary
+https://sanger-pathogens.github.io/Roary/
+<br>
+# Blast suite
+https://www.ncbi.nlm.nih.gov/books/NBK279690/
+<br>
