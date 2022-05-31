@@ -15,10 +15,8 @@ A directory for each input-fasta file containing annotated output in a range of 
 <br>
 ### Usage
 
-run_prokka_on_folder.py [assembly_dir] [prokka_out] [partition]
-
-source activate env_prokka<br>
-run_prokka_on_folder.py assemblies prokka_out project
+*source activate env_prokka*<br>
+*run_prokka_on_folder.py assemblies_directory prokka_out project*
 
 <br><br>
 
@@ -30,8 +28,8 @@ The output directory from prokka. Roary uses the input files from these which ar
 ### Usage
 
 *gather_gff_from_prokka.py prokka_out roary_in*<br>
-source activate env_prokka<br>
-sbatch -D . -c 8 --mem=24G --time=48:00:00 -J "Roary" -p daytime --wrap="roary -e --mafft -p 8 –f roary_out roary_in/*.gff"
+*source activate env_prokka*<br>
+*sbatch -D . -c 8 --mem=24G --time=48:00:00 -J "Roary" -p daytime --wrap="roary -e --mafft -p 8 –f roary_out roary_in/*.gff"*
 
 <br><br>
 
