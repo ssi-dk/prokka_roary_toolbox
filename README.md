@@ -36,18 +36,19 @@ The output directory from prokka. Roary uses the input files from these which ar
 
 ## What does it do?
 
-Prokka does genome annotation
-
-
-
-### Links
+Prokka does genome annotation on individual fasta files, roary compares gene content between isolates and outputs a range of different plots and tables to be analyzed.
 <br>
-## Prokka
+
+
+
+## Links
+
+### Prokka
 https://github.com/tseemann/prokka<br>
 <br>
-## Roary
+### Roary
 https://sanger-pathogens.github.io/Roary/<br>
 <br>
-## Blast suite
+### Blast suite
 https://www.ncbi.nlm.nih.gov/books/NBK279690/<br>
 <br>
