@@ -4,21 +4,27 @@
 #### Runs prokka on a directory of fasta assemblies
 ####
 #### Usage:
-#### run_prokka_on_folder.py [assembly_dir] [prokka_out] [partition]
+#### run_prokka_on_folder.py -i [assembly_dir] -o [prokka_out] -p [partition]
 ####
 #### Example:
-
-
-
 import os
 import sys
+import argparse
 
-in_dir = sys.argv[1]
-out_dir = sys.argv[2]
-if len(sys.argv) > 3:
-	partition = sys.argv[3]
-else:
-	partition = "project"
+parser = argparse.ArgumentParser(description='Run Prokka on all fasta files in an input folder (.fa, .fna, .fasta)')
+parser.add_argument('-i', dest="input", metavar='Input folder', type=str,
+                    help='Input folder containing genomic assemblies')
+parser.add_argument('-o', dest="output", metavar='Output folder', type=str,
+                    help='Output folder. Output folder will contain a subfolder for each input-fasta file with annotated genome')
+parser.add_argument('-p', dest="partition", metavar='partition',type=str, default = "project", help='Partition to run jobs on. Default \"project\"')
+args = parser.parse_args()
+ 
+
+
+
+in_dir = args.input
+out_dir = args.output
+partition = args.partition
 
 files = os.listdir(in_dir)
 
