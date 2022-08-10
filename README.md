@@ -29,7 +29,7 @@ The output directory from prokka. Roary uses the input files from these which ar
 
 *gather_gff_from_prokka.py prokka_out roary_in*<br>
 *source activate env_prokka*<br>
-*sbatch -D . -c 8 --mem=24G --time=48:00:00 -J "Roary" -p daytime --wrap="roary -e --mafft -p 8 –f roary_out roary_in/*.gff"*
+*sbatch -D . -c 8 --mem=24G --time=48:00:00 -J "Roary" -p daytime --wrap="roary -e --mafft -p 8 –f roary_out roary_in/\*.gff"*
 
 <br><br>
 
