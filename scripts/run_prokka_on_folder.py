@@ -16,6 +16,7 @@ parser.add_argument('-i', dest="input", metavar='Input folder', type=str,
                     help='Input folder containing genomic assemblies')
 parser.add_argument('-o', dest="output", metavar='Output folder', type=str,
                     help='Output folder. Output folder will contain a subfolder for each input-fasta file with annotated genome')
+parser.add_argument('-q', dest="queue_system", metavar='queue_system',type=str, default = "slurm", help='Queue system to use. Default \"slurm\", alternative \'none\'')
 parser.add_argument('-p', dest="partition", metavar='partition',type=str, default = "project", help='Partition to run jobs on. Default \"project\"')
 args = parser.parse_args()
  
@@ -37,7 +38,10 @@ for file in files:
 		ID = ".".join(split[:-1])
 		path = os.path.join(in_dir,file)
 		out_path = os.path.join(out_dir,ID)
-		cmd = "sbatch -D . -c 2 --mem=4G --time=4:00:00 -J \"Prokka\" -p "+partition+" --wrap=\"prokka "+path+" --outdir "+out_path+" --compliant --force\""
+		if args.queue_system == "slurm":
+			cmd = "sbatch -D . -c 2 --mem=4G --time=4:00:00 -J \"Prokka\" -p "+partition+" --wrap=\"prokka "+path+" --outdir "+out_path+" --compliant --force\""
+		else:
+			cmd = "prokka "+path+" --outdir "+out_path+" --compliant --force"
 		os.system(cmd)
 		print(cmd)
 
